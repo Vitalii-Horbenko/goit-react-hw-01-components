@@ -1,11 +1,13 @@
 import React from "react";
-import user from "../../user.json";
+// import user from "../../user.json";
 import style from "./Profile.module.css";
 
-const { name, tag, location, avatar } = user;
-const { followers, views, likes } = user.stats;
+// const { name, tag, location, avatar } = user;
+// const { followers, views, likes } = stats;
 
-const Profile = () => {
+const Profile = ({name, avatar, tag, location, stats}) => {
+const {followers, views, likes} = stats;
+
   return (
     <div className={style.container}>
       <div className={style.profile}>
