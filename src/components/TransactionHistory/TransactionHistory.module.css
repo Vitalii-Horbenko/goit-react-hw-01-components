@@ -1,0 +1,30 @@
+.transactionHistory {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.head {
+    background-color: #5EBDD5;
+    height: 50px;
+}
+
+.transactions {
+    height: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    text-align: center;
+    color: grey;
+}
+
+.transactions:nth-child(even) {
+    background-color: #ECF1F4;
+}
+
+.item {
+    border: #ECF1F4 1px solid;
+}
+
+.type {
+    text-transform: capitalize;
+}
