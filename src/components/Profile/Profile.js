@@ -1,12 +1,13 @@
 import React from "react";
 // import user from "../../user.json";
 import style from "./Profile.module.css";
+import PropTypes from "prop-types";
 
 // const { name, tag, location, avatar } = user;
 // const { followers, views, likes } = stats;
 
-const Profile = ({name, avatar, tag, location, stats}) => {
-const {followers, views, likes} = stats;
+const Profile = ({ name, avatar, tag, location, stats }) => {
+  const { followers, views, likes } = stats;
 
   return (
     <div className={style.container}>
@@ -35,6 +36,14 @@ const {followers, views, likes} = stats;
       </div>
     </div>
   );
+};
+
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.object,
 };
 
 export default Profile;
