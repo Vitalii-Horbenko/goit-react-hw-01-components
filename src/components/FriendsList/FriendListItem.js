@@ -5,11 +5,8 @@ import PropTypes from "prop-types";
 export const FriendListItem = ({ name, avatar, isOnline }) => {
   return (
     <li className={style.item}>
-      {isOnline ? (
-        <span className={`${style.active} ${style.status}`}></span>
-      ) : (
-        <span className={`${style.notActive} ${style.status}`}></span>
-      )}
+      
+        <span className={`${style.status} ${isOnline ? style.active : style.notActive} ` }></span>
       <img className="avatar" src={avatar} alt={name} width="48" />
       <p className={name}>{name}</p>
     </li>
@@ -17,7 +14,7 @@ export const FriendListItem = ({ name, avatar, isOnline }) => {
 };
 
 FriendListItem.propTypes = {
-  name: PropTypes.string,
-  avatar: PropTypes.string,
-  isOnline: PropTypes.bool,
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
